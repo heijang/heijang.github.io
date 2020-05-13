@@ -11,10 +11,7 @@ toc: true
 toc_sticky: true
 toc_label: "페이지 목차"
 ---
-
-* Hi
-
-1. First Para
+:url-asciidoctor: http://asciidoctor.org
 
 # SharpSharp
 

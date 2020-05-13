@@ -12,7 +12,11 @@ toc_sticky: true
 toc_label: "페이지 목차"
 ---
 
-# Hi
+# 1. Hi
+
+1. Why
+
+
 GitHub Blog 서비스인 github.io 블로그 시작하기로 했다.
 GitHub Blog 서비스의 이름은 Pages이다.
 

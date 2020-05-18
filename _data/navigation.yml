@@ -4,9 +4,9 @@ main:
     url: /
   - title: "IT"
     url: /categories/it/
+  - title: "Spring Security"
+    url: /categories/springsecurity/
   - title: "CATEGORIES"
     url: /categories/
   - title: "TAGS"
     url: /tags/
-  - title: "ABOUT"
-    url: /about/

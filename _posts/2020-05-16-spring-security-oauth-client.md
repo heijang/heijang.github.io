@@ -19,9 +19,14 @@ author_profile: false
 ---
 [root]: http://localhost:8080/
 
-요즘 많은 웹 사이트들에서 로그인 기능으로 [Login with Google] [Login with Facebook] [네이버로 로그인] 등을 제공하고 있다. 이와 같은 OAuth 인증에 대해서 알아보자.
+요즘 많은 웹 사이트들의 로그인 화면에서 아래와 같은 기능을 제공하고 있다.
+- Login with Google
+- Login with Facebook
+- 네이버아이디로 로그인
 
 Spring Security OAuth2 Client는 대표적인 인증시스템(구글, 페이스북 등) 또는 별도의 인증시스템과의 OAuth 인증 연동을 할 수 있도록 기능을 지원한다.
+
+OAuth 인증과 Spring Security OAuth2 Client에 대해서 알아보자.
 
 # OAuth 인증
 

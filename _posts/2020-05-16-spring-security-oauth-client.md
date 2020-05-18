@@ -19,9 +19,13 @@ author_profile: false
 ---
 [root]: http://localhost:8080/
 
-# Spring Security OAuth Client
+요즘 많은 웹 사이트들에서 로그인 기능으로 [Google 로그인] [Facebook 로그인] [네이버로 로그인] 등을 제공하고 있다. 이와 같은 OAuth 인증에 대해서 알아보자.
 
-## OAuth 인증 사용 이유
+Spring Security OAuth2 Client는 대표적인 인증시스템(구글, 페이스북 등) 또는 별도의 인증시스템과의 OAuth 인증 연동을 할 수 있도록 기능을 지원한다.
+
+# OAuth 인증
+
+## OAuth 인증 연동 이유
 
 ### 시스템 입장
 - 사용자 정보를 관리하는 것은 부담되는 일이다.<br>
@@ -37,17 +41,13 @@ author_profile: false
 
 별도의 회원가입 없이 믿을 수 있는 구글이나 페이스북을 통해 로그인 하고 시스템을 이용할 수 있도록 한다.
 
-## Spring Security OAuth Client
-대표적인 인증시스템(구글, 페이스북 등) 또는 별도의 인증시스템과의 OAuth 인증 연동을 할 수 있도록 기능을 지원한다.
+# 환경 설정
 
-
-## 환경 설정
-
-### 프로젝트 생성
+## 프로젝트 생성
    
    Spring Initializr 또는 IDE 를 통해 Spring Boot 프로젝트를 생성한다.
 
-### build.gradle 설정
+## build.gradle 설정
 
    Spring Initializr 생성 시 선택 하거나 build.gradle 에 직접 설정 할 수 있다.
    - spring-boot-starter-web
@@ -63,7 +63,7 @@ dependencies {
 }
 ```
 
-### application.yml 설정
+## application.yml 설정
    
 구글 인증 클라이언트 정보를 설정한다.<br>
 구글 인증 설정 전이므로 임의의 값을 우선 입력한다.
@@ -89,7 +89,7 @@ logging:
     org.springframework: debug
 ```
 
-### 프로젝트 실행
+## 프로젝트 실행
 
 이제 프로젝트를 실행해보자.<br>
 아래 gradle 실행 또는 IDE 의 Spring Boot Run 을 실행하면 된다.
@@ -104,14 +104,14 @@ $ ./gradlew bootrun
 
 클라이언트를 찾을 수 없다고 나온다. 그럼 이제 구글 클라이언트를 만들어 보자.
 
-## 구글 클라이언트 설정
+# 구글 클라이언트 설정
 
 구글 클라이언트를 만들기 위해서는 구글 개발자 계정이 필요하다.<br>
 등록 된 서비스 만이 구글 인증 서비스를 사용할 수 있어야 하므로 클라이언트 정보를 등록 해야 한다.
 
 [구글 개발자 콘솔](https://console.developers.google.com/) 에서 등록 가능하다.
 
-### 구글 클라이언트 등록
+## 구글 클라이언트 등록
 - 새 프로젝트 생성
 - OAuth 동의 화면
 - 사용자 인증 정보
@@ -119,7 +119,7 @@ $ ./gradlew bootrun
   - 승인된 자바스크립트 출처 URI 등록 : http://localhost:8080
   - 승인된 리디렉션 URI 등록 : http://localhost:8080/login/oauth2/code/google
 
-### 클라이언트 정보 설정
+## 클라이언트 정보 설정
 생성한 클라이언트 ID(client-id)와 클라이언트 보안 비밀(client-secret)을 application.yml 에 입력한다.
 
 ```yaml
@@ -133,18 +133,18 @@ spring:
             client-secret: B8f70jk8rT_dsk7ze11PO6sB
 ```
 
-### 프로젝트 재실행
+## 프로젝트 실행
 프로젝트를 재 기동 한 후 다시 접속하면 [루트 페이지][root]가 정상 호출 된다.
 
 ![정상에러페이지](https://i.imgur.com/jqV7XAs.png)
 
 구글 로그인 상태에 따라 구글 로그인 페이지 또는 승인 페이지가 나온다.
 
-## 자동 설정 소스 설명
+# 자동 설정 소스 설명
 
 Spring Boot 자동 설정 된 Security 설정 중 일부를 확인해보자.
 
-### OAuth2ClientProperties
+## OAuth2ClientProperties
 > [Github 링크](https://github.com/spring-projects/spring-boot/blob/master/spring-boot-project/spring-boot-autoconfigure/src/main/java/org/springframework/boot/autoconfigure/security/oauth2/client/OAuth2ClientProperties.java)
 
 인증 등록(Registration)이 제공자(Provider) 별로 관리 되는 구조이다.<br>
@@ -181,7 +181,7 @@ public class OAuth2ClientProperties {
 ```
 
 
-### CommonOAuth2Provider
+## CommonOAuth2Provider
 
 > [Github 링크](https://github.com/spring-projects/spring-security/blob/master/config/src/main/java/org/springframework/security/config/oauth2/client/CommonOAuth2Provider.java)
 

@@ -28,6 +28,7 @@ author_profile: false
 Spring Security OAuth2 Client는 대표적인 인증시스템(구글, 페이스북 등) 또는 별도의 인증시스템과의 OAuth 인증 연동을 할 수 있도록 기능을 제공한다.
 
 OAuth 인증과 Spring Security OAuth2 Client에 대해서 알아보자.
+<br><br>
 
 # OAuth 인증
 
@@ -46,6 +47,7 @@ OAuth 인증과 Spring Security OAuth2 Client에 대해서 알아보자.
   (하지만 구글이나 페이스북은 항상 로그인 되어 있다.)
 
 별도의 회원가입 없이 믿을 수 있는 구글이나 페이스북을 통해 로그인 하고 시스템을 이용할 수 있도록 한다.
+<br><br>
 
 # 환경 설정
 
@@ -183,6 +185,22 @@ public class OAuth2ClientProperties {
     ... 생략 ...
 
   }
+
+  ... 생략 ...
+
+  public static class Provider {
+
+		private String authorizationUri;
+		private String tokenUri;
+		private String userInfoUri;
+		private String userInfoAuthenticationMethod;
+		private String userNameAttribute;
+		private String jwkSetUri;
+		private String issuerUri;
+
+    ... 생략 ...
+
+	}
 }
 ```
 

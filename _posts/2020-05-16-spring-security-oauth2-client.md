@@ -24,7 +24,7 @@ author_profile: false
 - Login with Facebook
 - 네이버아이디로 로그인
 
-Spring Security OAuth2 Client는 대표적인 인증시스템(구글, 페이스북 등) 또는 별도의 인증시스템과의 OAuth 인증 연동을 할 수 있도록 기능을 지원한다.
+Spring Security OAuth2 Client는 대표적인 인증시스템(구글, 페이스북 등) 또는 별도의 인증시스템과의 OAuth 인증 연동을 할 수 있도록 기능을 제공한다.
 
 OAuth 인증과 Spring Security OAuth2 Client에 대해서 알아보자.
 
@@ -36,7 +36,7 @@ OAuth 인증과 Spring Security OAuth2 Client에 대해서 알아보자.
 - 사용자 정보를 관리하는 것은 부담되는 일이다.<br>
   (개인정보 동의, 비밀번호 암호화 저장 등 해야 할 일이 많다.)
 - 사용자는 우리의 시스템을 신뢰하지 않는다.<br>
-  (회원가입 자체를 거부하는 고객도 다수 존재한다.)
+  (회원가입 자체를 꺼리는 고객도 다수 존재한다.)
 
 ### 사용자 입장
 - 내 계정 정보를 신뢰할 수 없는 시스템에 입력 하는 것은 불안하다.<br>

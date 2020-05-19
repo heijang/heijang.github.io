@@ -6,8 +6,9 @@ categories:
   - SpringSecurity
 tags:
   - Spring
-  - SpringSecurity
+  - Security
   - OAuth2
+  - Client
   - Java
 last_modified_at: 2020-05-19T16:52:00-00:00
 toc: true
